@@ -1,6 +1,6 @@
 # UniWeb
 
-UniWeb is a modern web application designed to help users discover U.S. universities effortlessly. Built with **Next.js**, **TailwindCSS**, **ShadCN UI**, and **Cult/UI**, UniWeb provides a clean, user-friendly interface for accessing comprehensive university information.
+UniWeb is a modern web application designed to help users discover U.S. universities effortlessly. UniWeb provides a clean, user-friendly interface for accessing comprehensive university information.
 
 ## Installation
 
