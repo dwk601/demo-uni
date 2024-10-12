@@ -1,101 +1,130 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  DollarSign,
+  Laptop,
+} from "lucide-react";
+import { TextAnimate } from "@/components/ui/text-animate";
 
-export default function Home() {
+export default function Component() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    <div className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900">
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-6 text-center">
+              <div className="space-y-4">
+                <TextAnimate text="Welcome to UniWeb" type="rollIn" />
+                <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-400">
+                  Helping You Find U.S. Universities – No Agency Needed
+                </p>
+              </div>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-400">
+                UniWeb is here to make it easy for non-American families to find
+                universities in the U.S. We provide all the information you need
+                for international admissions – at little to no cost. No more
+                paying expensive agencies or waiting for quotes.
+              </p>
+              <div className="space-x-4">
+                <Button>
+                  Explore Now
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button variant="outline">Learn More</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-center mb-12">
+              Why UniWeb?
+            </h2>
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="flex flex-col items-center space-y-4 p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                <Globe className="h-12 w-12 text-blue-500" />
+                <h3 className="text-xl font-bold">International Focus</h3>
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  Get the right admission info specifically for international
+                  students.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                <DollarSign className="h-12 w-12 text-green-500" />
+                <h3 className="text-xl font-bold">Affordable</h3>
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  Access information for free or at a fraction of what agencies
+                  charge.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                <Laptop className="h-12 w-12 text-purple-500" />
+                <h3 className="text-xl font-bold">Fully Online</h3>
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  Everything is online – no need to contact agencies or wait for
+                  a quote.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-center mb-12">
+              How It Works
+            </h2>
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="flex flex-col items-center space-y-4 p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                <CheckCircle className="h-12 w-12 text-blue-500" />
+                <h3 className="text-xl font-bold">Browse Universities</h3>
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  Find U.S. universities that fit your needs.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                <CheckCircle className="h-12 w-12 text-green-500" />
+                <h3 className="text-xl font-bold">Get Admission Info</h3>
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  See key details like admission requirements, tuition, and
+                  scholarships.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                <CheckCircle className="h-12 w-12 text-purple-500" />
+                <h3 className="text-xl font-bold">Compare and Decide</h3>
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  Choose the university that's right for you – without extra
+                  hassle.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-6 text-center">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+                  Start Now
+                </h2>
+                <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-400">
+                  Ready to find the right university? UniWeb makes it simple and
+                  affordable. Start exploring today!
+                </p>
+              </div>
+              <div className="space-x-4">
+                <Button>
+                  Explore Now
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button variant="outline">Learn More</Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
