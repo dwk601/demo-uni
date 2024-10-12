@@ -7,6 +7,13 @@ import {
   Laptop,
 } from "lucide-react";
 import { TextAnimate } from "@/components/ui/text-animate";
+import { Typewriter } from "@/components/ui/typewriter";
+
+const texts = [
+  "here to help you discover U.S. universities effortlessly.",
+  "simplifying your search for U.S. universities.",
+  "providing all the info you need without the hassle or cost of agencies.",
+];
 
 export default function Component() {
   return (
@@ -17,16 +24,10 @@ export default function Component() {
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="space-y-4">
                 <TextAnimate text="Welcome to UniWeb" type="rollIn" />
-                <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-400">
-                  Helping You Find U.S. Universities – No Agency Needed
-                </p>
               </div>
-              <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-400">
-                UniWeb is here to make it easy for non-American families to find
-                universities in the U.S. We provide all the information you need
-                for international admissions – at little to no cost. No more
-                paying expensive agencies or waiting for quotes.
-              </p>
+              <div className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-400">
+                <Typewriter texts={texts} delay={1} baseText="UniWeb is " />
+              </div>
               <div className="space-x-4">
                 <Button>
                   Explore Now
